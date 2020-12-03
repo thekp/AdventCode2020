@@ -1,4 +1,5 @@
---- Day 3: Toboggan Trajectory ---
+## --- Day 3: Toboggan Trajectory ---
+
 With the toboggan login problems resolved, you set off toward the airport. While travel by toboggan might be easy, it's certainly not safe: there's very minimal steering and the area is covered in trees. You'll need to see which angles will take you near the fewest trees.
 
 Due to the local geology, trees in this area only grow on exact integer coordinates in a grid. You make a map (your puzzle input) of the open squares (.) and trees (#) you can see. For example:
@@ -52,7 +53,8 @@ Starting at the top-left corner of your map and following a slope of right 3 and
 
 The first half of this puzzle is complete! It provides one gold star: \*
 
---- Part Two ---
+## --- Part Two ---
+
 Time to check the rest of the slopes - you need to minimize the probability of a sudden arboreal stop, after all.
 
 Determine the number of trees you would encounter if, for each of the following slopes, you start at the top-left corner and traverse the map all the way to the bottom:
