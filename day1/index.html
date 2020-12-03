@@ -1,0 +1,84 @@
+
+<!DOCTYPE html> 
+<html> 
+  
+<head> 
+    <title>Day 1: Report Repair</title> 
+</head> 
+  
+<body> 
+
+    <h2>Part 1</h2>
+
+    <input type="file" name="inputfile1" id="inputfile1">
+   
+    <br> 
+
+    <pre id="combo1"></pre> 
+    <pre id="result1"></pre> 
+      
+    <script type="text/javascript"> 
+        document.getElementById('inputfile1').addEventListener('change', function() { 
+            var fr=new FileReader(); 
+            fr.onload=function(){ 
+
+                // By lines
+                var lines = this.result.split('\n');
+                // initiate
+                for(var i = 0; i < lines.length; i++){
+                    var current1 = Number(lines[i]);
+                    for(var x = 0; x < lines.length; x++){
+                        var current2 = Number(lines[x]);
+                        if (current2 + current1 === 2020) {
+                            var result = current1*current2
+                            document.getElementById('combo1').textContent=`Combo: ${current1} * ${current2}`; 
+                            document.getElementById('result1').textContent=`Result: ${result}`; 
+                        }
+                    }
+                }
+            } 
+            fr.readAsText(this.files[0]); 
+        }) 
+    </script> 
+
+
+
+    <h2>Part 2</h2>
+
+    <input type="file" name="inputfile2" id="inputfile2">
+
+    <br> 
+
+    <pre id="combo2"></pre> 
+    <pre id="result2"></pre> 
+    
+    <script type="text/javascript"> 
+        document.getElementById('inputfile2').addEventListener('change', function() { 
+            var fr=new FileReader(); 
+            fr.onload=function(){ 
+
+                // By lines
+                var lines = this.result.split('\n');
+                // initiate
+                for(var i = 0; i < lines.length; i++){
+                    var current1 = Number(lines[i]);
+                    for(var x = 0; x < lines.length; x++){
+                        var current2 = Number(lines[x]);
+                        for(var z = 0; z < lines.length; z++){
+                            var current3 = Number(lines[z]);
+                            if (current3 + current2 + current1 === 2020) {
+                                var result = current1*current2*current3
+                                document.getElementById('combo2').textContent=`Combo: ${current1} * ${current2} * ${current3}`; 
+                                document.getElementById('result2').textContent=`Result: ${result}`; 
+                            }
+                        }
+                    }
+                }
+            } 
+            fr.readAsText(this.files[0]); 
+        }) 
+    </script> 
+
+</body> 
+  
+</html> 
