@@ -1,4 +1,3 @@
-const { count } = require("console");
 const fs = require("fs");
 
 const map = fs.readFileSync("./day3/input.txt", "utf-8").split("\n");
